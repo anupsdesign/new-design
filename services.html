@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script> 
+    <link rel="stylesheet" href="plugins/aos.css">  
+    <link rel="stylesheet" href="styles/services.css">  
+    <link rel="stylesheet" href="styles/main.css">
+     
+    <title>Services</title>
+      <style>
+        body{
+              background-color: #232323;
+              animation: fadeIn 1000ms linear 0s 1 normal forwards;
+          }
+        header{
+              background-color: #121212;
+              z-index: 1;
+              animation: slidedown 500ms linear 0s 1 normal forwards,
+                  fadeIn 1600ms linear 0s 1 normal forwards;
+          }
+        .land-wrap{
+              background-image: none;
+              height: auto;
+          }
+        .land-wrap:after{
+              background-image: none;
+          }
+          
+        .skill-wrap{
+
+width: 100%;
+padding: 10px;
+border-radius: 10px;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+font-family: 'Questrial', sans-serif;
+}
+        .skillbar{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 20px 0;
+        overflow: hidden;
+}
+        .skillbar h2{
+        margin: 0;
+        color: #fff;
+        font-size: 1.6em;
+        padding: 5px;    
+        margin: 0 0 10px;
+        font-weight: bold;
+        letter-spacing: .1em;
+        position: relative;
+        animation: loading 2s ease-in;
+        -webkit-animation-fill-mode: forwards;    
+}
+        h2 span{
+        float: right;
+        margin-top: 20px;
+        text-shadow: 0px 0px 3px floralwhite;    
+        animation: loading 2s ease-in;
+        -webkit-animation-fill-mode: forwards;
+        font-weight: lighter;
+}
+        .skill_percentage{
+        overflow: hidden;
+        width: 95%;
+        background-color: #262626;
+        padding: 4px;
+        box-sizing: border-box;
+        border: 2px solid RGBA(71, 72, 75, 1.00);
+        border-radius: 6px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+}
+        .skill_level{
+        background-color: RGBA(230, 230, 250, 1.00);
+        height: 5px;
+        border-radius: 6px;
+        position: relative;
+}
+        .full{
+        animation-delay: 2s;
+        animation: slide100 1s ease-in;
+        -webkit-animation-fill-mode: forwards;
+}
+        .not-full{
+        width: 75%;    
+        animation-delay: 2s;
+        animation: slide70 1s ease-in;
+        -webkit-animation-fill-mode: forwards;
+        }    
+      </style>
+  </head>
+  <body>
+
+    <header>
+        <a href="index.html" class="logo-anchor"><div class="logo"></div>
+        </a>
+        <span class="byanup">
+            Designed and Coded <strong>Anup</strong></span>
+      <nav>
+        <a href="index.html" >About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>  
+      </nav>
+    </header>
+        <div id="mobileNav-wrap" class="overlay-wrap" onclick="closeNav()">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content" onclick="closeNav()">  
+            <a href="index.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+    <div class="page-content-blur">  
+    <div class="land-wrap">
+        <h3 data-aos="fade-down">Service Spectrum</h3>
+        <div class="image-center">
+        <div class="holdingcontainer">
+          <div class="internalcontainerL">
+            <div class="lWrap" data-aos="fade-up-right" data-aos-once ="true">  
+            <h1>Front&#45;End Development</h1>
+            <p>    
+            I create responsive websites that allow users to experience your website in a better way in any device they are using. My goal for every project is to build a beautiful and responsive design using HTML, CSS and JavaScript.
+                </p>    
+            <h1>Back&#45;End Development</h1>
+            <p>
+            Coming soon! I am constantly working on mastering new skills. I am always on the lookout for the latest updates and changes in the industry. It is important to keep perfecting craft constantly since technology is always evolving. 
+            I will be bringing some exciting updates soon, so make sure to stop by every once in awhile.   
+            </p>
+            </div>
+          </div>
+          <div class="internalcontainerR" > 
+            <div class="rWrap" data-aos="fade-up-left" data-aos-once ="true" data-aos-offset="0">  
+            <div class="skill-wrap">
+              <div class="skillbar">
+              <h2 style="text-transform: uppercase">
+                  <img style="width: 40px; float: left;" src="images/html.png">
+                  <span>100%</span>
+                  </h2>
+                <div class="skill_percentage">
+                <div class="skill_level full" data-aos="fade-right"  data-aos-once ="true"></div>  
+                </div>  
+              </div>
+              <div class="skillbar">
+              <h2 style="text-transform: uppercase">
+                  <img style="width: 40px; float: left;" src="images/css.png">
+                  <span>100%</span>
+                  </h2>
+                <div class="skill_percentage">
+                <div class="skill_level full" data-aos="fade-right" data-aos-offset="0"  data-aos-once ="true"></div>  
+                </div>  
+              </div>
+              <div class="skillbar">
+              <h2>
+                  <img style="width: 40px; float: left;" src="images/js.png">
+                  <span>70%</span>
+                  </h2>
+                <div class="skill_percentage">
+                <div class="skill_level not-full"></div>  
+                </div>  
+              </div>
+          </div>
+            </div>  
+          </div>
+        </div>  
+        </div>
+        <span class="openbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <h1>&#9776;</h1>
+        </span>
+    </div>
+    </div>
+      
+    <!-- For sliding menu, and background blur class toggle-->
+    <script>
+    function openNav() {
+        document.getElementById("mobileNav-wrap").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("mobileNav-wrap").style.width = "0%";
+    }    
+
+    $(".openbtn, .overlay-wrap").click(function(){
+        $(".page-content-blur").toggleClass("blur-body",3000);
+    });
+
+    //esc key menu close needs a little fixing
+    /*    
+    $( document ).on( 'keydown', function ( e ) {
+        if ( e.keyCode === 27 ) { // ESC
+            $("#myNav").css("width","0");
+    }
+     if($("#myNav").css("width","0")){
+         $(".page-content-blur").toggleClass("blur-body",3000);;  
+    }  
+    });
+        */
+    </script>
+    <!-- For aos-->
+    <script src="plugins/aos.js"></script> 
+    <script>
+      AOS.init({
+          duration: 1200,
+      });
+    </script>  
+      
+  </body>
+</html>

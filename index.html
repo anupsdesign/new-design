@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>     
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Anup' Design</title>
+      <style>
+          body{
+              animation: fadeIn 1000ms linear 0s 1 normal forwards;
+          }
+          header{
+              animation: slidedown 500ms linear 0s 1 normal forwards,
+                  fadeIn 1600ms linear 0s 1 normal forwards;
+          }
+      </style>
+  </head>
+  <body>
+    <div class="">
+    <header>
+        <a href="index.html" class="logo-anchor"><div class="logo"></div>
+        </a>
+        <span class="byanup">
+            Designed and Coded <strong>Anup</strong></span>
+      <nav>
+        <a href="index.html" class="active">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>  
+      </nav>
+    </header>
+        <div id="mobileNav-wrap" class="overlay-wrap" onclick="closeNav()">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content" onclick="closeNav()">  
+            <a href="index.html" class="active">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+    </div>
+    <div class="page-content-blur">  
+    <div class="land-wrap">
+        <div class="bg-overlay"></div>
+        <h2>
+        Producing high quality responsive websites and exceptional user experience
+        </h2>
+        <div class="about-slide-up">
+        <div class="about">
+        <div class="center-image"></div>   
+        </div>
+        <p>
+        Hi, I am <span>Anup</span>. I live in <span>New York City</span>. I'm currently pursuing a degree in Computer Science. I <span>design and build</span> high quality responsive websites to provide an <span>exceptional user</span> <span>experience</span>.    
+        </p>  
+        </div>   
+        <span class="openbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <h1>&#9776;</h1>
+        </span>
+    </div>
+    </div>  
+    <!-- For sliding menu, and background blur class toggle-->
+    <script>
+    function openNav() {
+        document.getElementById("mobileNav-wrap").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("mobileNav-wrap").style.width = "0%";
+    }    
+
+    $(".openbtn, .overlay-wrap").click(function(){
+        $(".page-content-blur").toggleClass("blur-body",3000);
+    });
+
+    //esc key menu close needs a little fixing
+    /*    
+    $( document ).on( 'keydown', function ( e ) {
+        if ( e.keyCode === 27 ) { // ESC
+            $("#myNav").css("width","0");
+    }
+     if($("#myNav").css("width","0")){
+         $(".page-content-blur").toggleClass("blur-body",3000);;  
+    }  
+    });
+        */
+    </script>   
+  </body>
+</html>

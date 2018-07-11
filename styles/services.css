@@ -1,0 +1,110 @@
+.image-center{
+  position: absolute;
+  top: 200px;
+}
+.image-center img{
+  width: 700px;
+  padding: 10px;
+}
+
+.land-wrap{
+  background-image: none;
+  height: auto;
+}
+.land-wrap h3{
+width: 100%;
+position: absolute;
+text-align: center;
+margin-top: 140px;
+font-size: 2.4em;
+    color: #F2F2F2;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    animation: fadeIn 2500ms linear 0s 1 normal forwards;
+}
+.land-wrap:after{
+  background-image: none;
+    
+}
+.openbtn h1{
+display:none;
+position: fixed;
+margin: 0;
+top: 15px;
+font-size: 1.7em;
+right: 30px;
+color: RGBA(242, 242, 242, 1.00);
+z-index: 2000;
+}
+
+.holdingcontainer{
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        background-color: #232323;
+
+        box-sizing: border-box;
+        color: #DFE3E6;
+        flex-direction: row;
+      }
+.internalcontainerL{
+flex: 1;/*aomunt of space ratio*/
+padding: 10px;
+font-size: 1em;
+}
+.internalcontainerR{
+flex: 1;
+padding: 10px;
+font-size: 1em;
+}
+.lWrap{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color:#121212;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    border-radius: 10px;
+    color: RGBA(242, 242, 242, 1.00);
+}
+.rWrap{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color:#121212;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    border-radius: 10px;
+    color: RGBA(242, 242, 242, 1.00);
+}
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+p{
+    font-family: 'Source Code Pro', monospace;
+    font-size: .9em;
+}
+
+@media only screen and (min-width:360px) and (max-width:375px){
+ h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+     text-align: center;
+}
+p{
+    font-family: 'Source Code Pro', monospace;
+    font-size: .9em;
+    text-align: center;
+}   
+}
+@media screen and (max-width:768px) {
+        .holdingcontainer{
+          flex-direction: column;
+        }
+      }
+
+@media only screen and (min-width:360px) and (max-width:805px){
+  .openbtn h1{
+      display: block;
+  } 
+} 

@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body{
+    margin: 0;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+}
+nav{
+    text-align: right;
+    line-height: 100px;
+}
+a.logo-anchor{
+    width: 150px;
+    background-image: url(../images/ad%20small.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    position: absolute;
+    left: 20px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: RGBA(223, 227, 230, 1.00);
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+    font-weight: bolder;
+    transition: .3s;
+}
+nav a.active{
+    text-shadow: 0 0 10px lavender;
+    transform: scale(1.2);
+}
+nav a:hover{
+    text-shadow: 0 0 10px lavender;
+    transition: .3s;
+}
+.land-wrap{
+    background-image: url(../images/dark.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.land-wrap:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, RGBA(18, 18, 18, 0), RGBA(18, 18, 18, 1.00) 90%); 
+    width: 100%;
+    height: 80px;
+    z-index: 0;
+}
+.about-slide-up {
+    z-index: 1;
+    width: 600px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: RGBA(18, 18, 18, 1.00);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    animation: pulse 1.5s infinite, slideup 800ms linear 0s 1 normal forwards;
+}
+
+span.byanup{
+    color: RGBA(242, 242, 242, 1.00);
+    position: absolute;
+    left: 180px;
+    line-height: 100px;
+    font-size: .8em;
+    height: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+span.byanup strong{
+    font-weight: bolder;
+    font-size: 1.3em;
+    font-style: italic;
+}
+.land-wrap h2{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%)translateY(-50%);
+    font-size: 2.1em;
+    color: aliceblue;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    animation: fadeIn 1500ms linear 0s 1 normal forwards;
+}
+.about-slide-up p{
+    color: RGBA(242, 242, 242, 1.00);
+    margin: 0;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+    transform: translateY(-50%);
+    font-family: 'Source Code Pro', monospace;
+}
+.about-slide-up p span{
+    text-shadow: 0 0 10px lavender;
+    font-weight: bold;
+}
+.about-slide-up .about .center-image{
+    width: 150px;
+    height: 150px;
+    background-image: url(../images/portrait.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: aliceblue;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.bg-overlay{
+    background-color: rgba(0,0,0,.6);
+    height: 100%;
+}
+.overlay-wrap {
+    display:none;
+}
+.overlay-content {
+    display:none;
+}
+.overlay-wrap a {
+    display:none;
+}
+.openbtn h1{
+    display:none;
+}
+.overlay-wrap .closebtn {
+    display:none;
+}
+
+@keyframes slideup{
+    from{
+        bottom: -50vh;
+    }
+    to{
+        bottom: 0;
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    } 
+    to{
+        opacity: 1;
+    }
+
+}
+@keyframes pulse {
+0% {
+-moz-box-shadow: 0 0 0 0 RGBA(230, 230, 250, .2);
+box-shadow:0px 0px 0px 5px RGBA(230, 230, 250, .2);
+}
+70% {
+-moz-box-shadow: 0 0 0 8px RGBA(230, 230, 250, 0);
+box-shadow: 0px 0px 0px 5pxpx RGBA(230, 230, 250, 0);
+}
+100% {
+-moz-box-shadow: 0 0 0 0 RGBA(230, 230, 250, 0);
+box-shadow: 0px 0px 0px 5px RGBA(230, 230, 250, 0);
+}
+}
+@keyframes slidedown{
+              from{
+                  top: -50%;
+              }
+              to{
+                  top: 0;
+              }
+          }
+
+@media only screen and (min-width:360px) and (max-width:375px){
+span.byanup{
+    bottom: 0;
+    left: 15px;
+    line-height: 0;
+    font-size: .6em;
+}  
+.about-slide-up {
+    width: 330px;
+    height: 250px;
+}
+.land-wrap h2{
+    width: 97%;
+    top: 40%;
+    font-size: 1em;
+}
+.about-slide-up p{
+    font-size: 1em;
+    transform: translateY(-44%);
+} 
+span.byanup{
+    position: absolute;
+    bottom: 5px;
+    font-size: .5em;
+}    
+}
+
+@media only screen and (min-width:360px) and (max-width:805px){
+nav{display: none;}    
+a.logo-anchor{
+    width: 150px;
+    height: 100%;
+    position: absolute;
+    left: 10px;
+}    
+    
+
+.overlay-wrap {
+    display:block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.5);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    display:block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.overlay-wrap a {
+    display:block;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: RGBA(223, 227, 230, 1.00);
+    text-transform: uppercase;
+    padding: 20px;
+    margin: 0;
+    font-family: 'Abel', sans-serif;
+    font-weight: bolder;
+    transition: .3s;
+    display: block;
+    transition: 0.3s;
+    letter-spacing: .2em;
+}    
+.openbtn h1{
+    display:block;
+    position: fixed;
+    margin: 0;
+    top: 15px;
+    font-size: 1.7em;
+    right: 30px;
+    color: RGBA(242, 242, 242, 1.00);
+}
+.overlay-wrap .closebtn {
+    display:block;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    font-size: 4.5em;
+    padding: 0;
+    padding-right: 20px;
+}
+    
+    
+.overlay-wrap a:not(.closebtn):hover{
+    transition: .3s;
+    text-shadow: 0 0 10px lavender;
+}
+.overlay-wrap a.active{
+    text-shadow: 0 0 10px lavender;
+    transform: scale(1.2);
+}
+.blur-body{
+    filter: blur(5px);
+    transition: .5s;
+}
+    
+}
+/*
+@media screen and (max-width: 360px) {
+  .overlay-wrap .closebtn {
+    font-size: 40px;
+    top: 0px;
+    right: 0px;
+  }
+}
+*/

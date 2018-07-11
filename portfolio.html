@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script> 
+    <link rel="stylesheet" href="plugins/aos.css">  
+    <link rel="stylesheet" href="styles/portfolio.css">  
+    <link rel="stylesheet" href="styles/main.css">
+     
+    <title>Portfolio</title>
+      <style>
+          body{
+              background-color: #232323;
+              animation: fadeIn 1000ms linear 0s 1 normal forwards;
+          }
+          header{
+              background-color: #121212;
+              z-index: 1;
+              animation: slidedown 500ms linear 0s 1 normal forwards,
+                  fadeIn 1600ms linear 0s 1 normal forwards;
+          }
+          .land-wrap{
+              background-image: none;
+              height: auto;
+          }
+          .land-wrap:after{
+              background-image: none;
+          }
+      </style>
+  </head>
+  <body>
+    <div class="">
+    <header>
+        <a href="index.html" class="logo-anchor"><div class="logo"></div>
+        </a>
+        <span class="byanup">
+            Designed and Coded <strong>Anup</strong></span>
+      <nav>
+        <a href="index.html" >About</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>  
+      </nav>
+    </header>
+        <div id="mobileNav-wrap" class="overlay-wrap" onclick="closeNav()">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content" onclick="closeNav()">  
+            <a href="index.html">About</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+    </div>
+    <div class="page-content-blur">  
+    <div class="land-wrap">
+        <h3 data-aos="fade-down">Created using HTML, CSS and JavaScript. Scroll down to see more.</h3>
+        <div class="image-center">
+        <img src="images/1.png" data-aos="fade-up">
+        <img src="images/2.png" data-aos="fade-left">
+        <img src="images/3.png" data-aos="fade-right" data-aos-offset="0">    
+        </div>
+        <span class="openbtn" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <h1>&#9776;</h1>
+        </span>
+    </div>
+    </div>  
+      
+    <!-- For sliding menu, and background blur class toggle-->
+    <script>
+    function openNav() {
+        document.getElementById("mobileNav-wrap").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("mobileNav-wrap").style.width = "0%";
+    }    
+
+    $(".openbtn, .overlay-wrap").click(function(){
+        $(".page-content-blur").toggleClass("blur-body",3000);
+    });
+
+    //esc key menu close needs a little fixing
+    /*    
+    $( document ).on( 'keydown', function ( e ) {
+        if ( e.keyCode === 27 ) { // ESC
+            $("#myNav").css("width","0");
+    }
+     if($("#myNav").css("width","0")){
+         $(".page-content-blur").toggleClass("blur-body",3000);;  
+    }  
+    });
+        */
+    </script>
+    <!-- For aos-->  
+    <script src="plugins/aos.js"></script>
+    <script>
+      AOS.init({
+          duration: 1200,
+      });
+    </script>  
+      
+  </body>
+</html>
