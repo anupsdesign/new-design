@@ -197,10 +197,9 @@ span.byanup{
     font-size: .6em;
 }  
 .about-slide-up {
-    width: 330px;
-    height: 250px;
+    width: 90%;
     animation: none;
-    bottom: 0;
+    bottom: 0px;
 }
 .land-wrap h2{
     width: 97%;
